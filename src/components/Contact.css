@@ -1,8 +1,16 @@
+/* ========================================
+   Contact Section
+   ======================================== */
+
+.contact {
+  background-color: transparent;
+}
+
 .contact-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .contact .text {
@@ -10,69 +18,82 @@
 }
 
 .contact .text .topic {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 700;
   color: #b44ce0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .contact .text p {
   font-size: 1.6rem;
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.8;
   max-width: 600px;
   margin: 0 auto;
 }
 
+/* --- Form --- */
 .contact-form {
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .contact-form .input-group {
   display: flex;
   gap: 2rem;
-  margin-bottom: 2rem;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 1.5rem 2rem;
-  background: rgba(255, 255, 255, 0.05);
+  padding: 1.6rem 2rem;
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
+  border-radius: 1.2rem;
   color: white;
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   resize: none;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #b44ce0;
-  box-shadow: 0 0 15px rgba(180, 76, 224, 0.15);
+  background: rgba(180, 76, 224, 0.04);
+  box-shadow: 0 0 20px rgba(180, 76, 224, 0.12);
   outline: none;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #666;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .contact-form textarea {
-  margin-bottom: 2rem;
+  min-height: 16rem;
 }
 
-.contact-form .btn {
-  width: 100%;
-  padding: 1.5rem;
-  text-align: center;
+.contact-form .gradient-button {
+  align-self: center;
+  min-width: 200px;
 }
+
+/* ========================================
+   Responsive
+   ======================================== */
 
 @media (max-width: 995px) {
   .contact-form .input-group {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .text .topic {
+    font-size: 2.4rem;
   }
 }
