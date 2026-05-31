@@ -1,0 +1,27 @@
+/* Interactive Grid Background */
+.interactive-grid-container {
+  position: relative;
+  width: 100%;
+}
+
+.interactive-grid-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.interactive-grid-fade {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-color: #0a0a0a;
+  z-index: 0;
+}
+
+.interactive-grid-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
