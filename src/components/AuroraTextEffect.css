@@ -1,0 +1,40 @@
+/* Aurora Text Effect */
+.aurora-text {
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    135deg,
+    #22d3ee 0%,
+    #4ade80 15%,
+    #facc15 30%,
+    #b44ce0 45%,
+    #22d3ee 60%,
+    #4ade80 75%,
+    #facc15 90%,
+    #b44ce0 100%
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: aurora-shift 6s ease-in-out infinite;
+}
+
+@keyframes aurora-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

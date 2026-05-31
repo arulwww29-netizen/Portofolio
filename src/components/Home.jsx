@@ -1,17 +1,16 @@
 import mainImg from '../assets/main.jpg'
-import HellBackground from './HellBackground'
 import GradientButton from './GradientButton'
+import AuroraTextEffect from './AuroraTextEffect'
 import './Home.css'
 
 function Home() {
   return (
     <section className="home" id="home">
-      <HellBackground color="#b44ce0" />
       <div className="home-img">
         <img src={mainImg} alt="Muhammad Kholilur Rahman" />
       </div>
       <div className="home-content">
-        <h1>Hi, It's <span>Muhammad Kholilur Rahman</span></h1>
+        <h1>Hi, It's <AuroraTextEffect text="Muhammad Kholilur Rahman" fontSize="inherit" /></h1>
         <h3 className="typing-text">I'm a <span></span></h3>
         <p>
           Passionate web developer and digital creator with a keen eye for
