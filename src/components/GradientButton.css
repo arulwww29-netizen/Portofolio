@@ -1,0 +1,81 @@
+.gradient-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  overflow: visible;
+  isolation: isolate;
+  padding: 0.8rem 2.4rem;
+}
+
+/* Animated gradient border layer */
+.gradient-btn-border {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+/* Dark inner fill (creates the border effect) */
+.gradient-btn-inner {
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background-color: #0a0a0a;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+/* Glow underneath */
+.gradient-btn-glow {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 30%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+/* Button text content */
+.gradient-btn-content {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Hover effects */
+.gradient-btn:hover .gradient-btn-inner {
+  background-color: #1a1a2e;
+}
+
+.gradient-btn:hover .gradient-btn-glow {
+  opacity: 1;
+}
+
+.gradient-btn:hover .gradient-btn-border,
+.gradient-btn:hover .gradient-btn-glow {
+  animation-duration: 0.5s !important;
+}
+
+.gradient-btn:hover {
+  transform: scale(1.03);
+  animation-duration: 0.5s !important;
+}
+
+.gradient-btn:active {
+  transform: scale(0.98);
+}

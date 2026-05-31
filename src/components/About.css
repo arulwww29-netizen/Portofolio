@@ -1,0 +1,41 @@
+.about .about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about .left img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 30px rgba(180, 76, 224, 0.3);
+  transition: 0.3s ease;
+}
+
+.about .left img:hover {
+  box-shadow: 0 0 50px rgba(180, 76, 224, 0.5);
+  transform: scale(1.02);
+}
+
+.about .right .topic {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #b44ce0;
+  margin-bottom: 1.5rem;
+}
+
+.about .right p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 995px) {
+  .about .about-details {
+    flex-direction: column;
+    text-align: center;
+  }
+}

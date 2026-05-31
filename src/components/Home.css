@@ -1,0 +1,147 @@
+.home {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: #0a0a0a;
+  overflow: hidden;
+}
+
+.home .home-img,
+.home .home-content {
+  position: relative;
+  z-index: 1;
+}
+
+.home .home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home .home-content h1 span {
+  color: #b44ce0;
+}
+
+.home-content h3 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.home-content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.home-img {
+  width: 600px;
+  height: 50vh;
+  border-radius: 50%;
+}
+
+.home-img img {
+  position: relative;
+  width: 400px;
+  height: 50vh;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #b44ce0;
+  cursor: pointer;
+  transition: 0.4s ease;
+  object-fit: cover;
+}
+
+.home-img img:hover {
+  animation: homeAnimate 1.5s ease-in-out;
+  box-shadow: 0 0 80px #b44ce0;
+}
+
+@keyframes homeAnimate {
+  0% { scale: 1; }
+  50% { scale: 1.05; }
+  100% { scale: 1; }
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  color: #b44ce0;
+  border: 0.2rem solid #b44ce0;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: black;
+  background-color: #b44ce0;
+  transform: scale(1.3) translateY(-5px);
+  box-shadow: 0 0 25px #b44ce0;
+}
+
+/* Typing Text */
+.typing-text span {
+  position: relative;
+  color: #b44ce0;
+}
+
+.typing-text span::before {
+  content: " Software Developer";
+  color: #b44ce0;
+  animation: words 20s infinite;
+}
+
+.typing-text span::after {
+  content: "";
+  background-color: #0a0a0a;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid #0a0a0a;
+  right: -8px;
+  animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid #b44ce0;
+  }
+}
+
+@keyframes words {
+  0%, 20% { content: " Web Developer"; }
+  21%, 40% { content: " Developer"; }
+  41%, 60% { content: " Web Designer"; }
+  61%, 80% { content: " Youtuber"; }
+  81%, 100% { content: " Script Writer"; }
+}
+
+@media (max-width: 1000px) {
+  .home { gap: 4rem; }
+}
+
+@media (max-width: 995px) {
+  .home {
+    flex-direction: column;
+    margin: 5rem 4rem;
+  }
+  .home .home-content h3 { font-size: 2.5rem; }
+  .home-content h1 { font-size: 5rem; }
+  .home-img img {
+    width: 350px;
+    height: 50vh;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .home-content h1 { font-size: 4rem; }
+  .home-content h3 { font-size: 2.5rem; }
+}

@@ -1,0 +1,78 @@
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contact .text {
+  text-align: center;
+}
+
+.contact .text .topic {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #b44ce0;
+  margin-bottom: 1rem;
+}
+
+.contact .text p {
+  font-size: 1.6rem;
+  color: #ccc;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 650px;
+}
+
+.contact-form .input-group {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #b44ce0;
+  box-shadow: 0 0 15px rgba(180, 76, 224, 0.15);
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #666;
+}
+
+.contact-form textarea {
+  margin-bottom: 2rem;
+}
+
+.contact-form .btn {
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 995px) {
+  .contact-form .input-group {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,61 @@
+.education-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.education-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  transition: 0.4s ease;
+  position: relative;
+}
+
+.education-box:hover {
+  transform: translateX(10px);
+  border-color: rgba(180, 76, 224, 0.3);
+  box-shadow: 0 5px 30px rgba(180, 76, 224, 0.1);
+}
+
+.education-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, #9b30ff, #b44ce0);
+  border-radius: 5px 0 0 5px;
+}
+
+.edu-icon {
+  font-size: 3rem;
+  color: #b44ce0;
+  min-width: 50px;
+  text-align: center;
+}
+
+.edu-details .edu-year {
+  font-size: 1.3rem;
+  color: #b44ce0;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.edu-details h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.edu-details p {
+  font-size: 1.5rem;
+  color: #aaa;
+}

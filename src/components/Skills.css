@@ -1,0 +1,100 @@
+.skills .skills-detail {
+  margin-bottom: 4rem;
+}
+
+.skills .skills-detail .topic {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #b44ce0;
+  margin-bottom: 1rem;
+}
+
+.skills .skills-detail p {
+  font-size: 1.6rem;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.skills .experience {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skills .experience .num {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #b44ce0;
+}
+
+.skills .experience .exp {
+  font-size: 1.6rem;
+  color: #ccc;
+}
+
+.skills .boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.skills .boxes .box {
+  padding: 2rem;
+}
+
+.skills .boxes .box .topic {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  position: relative;
+}
+
+.skill-per {
+  height: 100%;
+  background: linear-gradient(90deg, #9b30ff, #b44ce0, #d35ce8);
+  border-radius: 25px;
+  position: relative;
+  animation: fillBar 1.5s ease forwards;
+}
+
+.skill-per .tooltip {
+  position: absolute;
+  right: -1.5rem;
+  top: -3.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  background-color: #b44ce0;
+  border-radius: 0.5rem;
+}
+
+.skill-per .tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px 5px 0;
+  border-style: solid;
+  border-color: #b44ce0 transparent transparent;
+}
+
+@keyframes fillBar {
+  0% { width: 0%; }
+}
+
+@media (max-width: 995px) {
+  .skills .boxes {
+    grid-template-columns: 1fr;
+  }
+}
